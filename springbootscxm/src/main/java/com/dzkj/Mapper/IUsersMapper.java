@@ -6,9 +6,9 @@ import org.springframework.stereotype.Repository;
 
 import com.dzkj.pojo.Users;
 
+import tk.mybatis.mapper.common.Mapper;
+
 @Repository
-public interface IUsersMapper {
-	List<Users> findAll();
-	int deleteById(Integer id);
-	int add();
+public interface IUsersMapper extends Mapper<Users>{
+	
 }

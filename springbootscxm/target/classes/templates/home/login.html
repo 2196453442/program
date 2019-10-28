@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 
 <head lang="en">
 <meta charset="UTF-8">
@@ -10,7 +10,7 @@
 <meta name="format-detection" content="telephone=no">
 <meta name="renderer" content="webkit">
 <meta http-equiv="Cache-Control" content="no-siteapp" />
-
+<script type="text/javascript" src="../basic/js/jquery-1.9.min.js"></script>
 <link rel="stylesheet" href="../AmazeUI-2.4.2/assets/css/amazeui.css" />
 <link href="../css/dlstyle.css" rel="stylesheet" type="text/css">
 </head>
@@ -33,14 +33,14 @@
 				<div class="clear"></div>
 
 				<div class="login-form">
-					<form>
+					<form action="login" id="loginform">
 						<div class="user-name">
 							<label for="user"><i class="am-icon-user"></i></label> <input
-								type="text" name="" id="user" placeholder="邮箱/手机/用户名">
+								type="text" name="uname" id="user" placeholder="邮箱/手机/用户名">
 						</div>
 						<div class="user-pass">
 							<label for="password"><i class="am-icon-lock"></i></label> <input
-								type="password" name="" id="password" placeholder="请输入密码">
+								type="password" name="pwd" id="password" placeholder="请输入密码">
 						</div>
 					</form>
 				</div>
@@ -48,11 +48,11 @@
 				<div class="login-links">
 					<label for="remember-me"><input id="remember-me"
 						type="checkbox">记住密码</label> <a href="#" class="am-fr">忘记密码</a> <a
-						href="register.jsp" class="zcnext am-fr am-btn-default">注册</a> <br />
+						href="register.html" class="zcnext am-fr am-btn-default">注册</a> <br />
 				</div>
 				<div class="am-cf">
-					<input type="submit" name="" value="登 录"
-						class="am-btn am-btn-primary am-btn-sm">
+					<input type="submit" name="" onclick= "$('#loginform').submit();" value="登 录"
+						class="am-btn am-btn-primary am-btn-sm"/>
 				</div>
 				<div class="partner">
 					<h3>合作账号</h3>
